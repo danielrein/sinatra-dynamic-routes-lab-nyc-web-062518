@@ -15,15 +15,15 @@ class App < Sinatra::Base
     string = ''
     n = :number.to_i
     n.times { string += :phrase }
-    string
+    erb string
   end
 
   get '/square/:number' do
-    :number.to_i.square
+    erb :number.to_i.square
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    "#{word1} #{word2} #{word3} #{word4} #{word5}"
+    erb "#{word1} #{word2} #{word3} #{word4} #{word5}"
   end
 
   get '/:operation/:number1/:number2' do
