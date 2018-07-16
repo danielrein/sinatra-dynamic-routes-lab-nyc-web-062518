@@ -4,7 +4,7 @@ require 'pry'
 class App < Sinatra::Base
 
   get '/reversename/:name' do
-    "#{:name.reverse}"
+    :name.reverse
   end
 
   get '/square/:number' do
