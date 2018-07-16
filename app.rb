@@ -4,26 +4,26 @@ require 'pry'
 class App < Sinatra::Base
 
   get '/reversename/:name' do
-    erb :name.reverse
+    params[:name].reverse
   end
 
   get '/square/:number' do
-    erb "#{:number.to_i * :number.to_i}"
+    "#{:number.to_i * :number.to_i}"
   end
 
   get '/say/:number/:phrase' do
     string = ''
     n = :number.to_i
     n.times { string += :phrase }
-    erb string
+    string
   end
 
   get '/square/:number' do
-    erb :number.to_i.square
+    :number.to_i.square
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    erb "#{word1} #{word2} #{word3} #{word4} #{word5}"
+    "#{word1} #{word2} #{word3} #{word4} #{word5}"
   end
 
   get '/:operation/:number1/:number2' do
