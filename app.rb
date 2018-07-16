@@ -15,6 +15,7 @@ class App < Sinatra::Base
     string = ''
     n = :number.to_i
     n.times { string += "#{:phrase}\n" }
+    string
   end
 
   get '/square/:number' do
