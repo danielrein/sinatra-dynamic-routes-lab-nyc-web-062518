@@ -28,14 +28,15 @@ class App < Sinatra::Base
   end
 
   get '/:operation/:number1/:number2' do
-    x, y = :number1.to_i, :number2.to_i
-    if :operation.to_s == 'add'
+    x, y = params[:number1].to_i, params[:numberw].to_i
+    case params[:operation]
+    when 'add'
       x + y
-    elsif :operation.to_s == 'subtract'
+    when 'subtract'
       x - y
-    elsif :operation.to_s == 'multiply'
+    when 'multiply'
       x * y
-    elsif :operation.to_s == 'divide'
+    when 'divide'
       x / y
     else
       "Route Not Found"
