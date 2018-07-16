@@ -32,13 +32,13 @@ class App < Sinatra::Base
     y = params[:number2].to_i
     case params[:operation]
     when 'add'
-      x + y
+      "#{x + y}"
     when 'subtract'
-      x - y
+      "#{x - y}"
     when 'multiply'
-      x * y
+      "#{x * y}"
     when 'divide'
-      x / y
+      "#{x / y}"
     else
       "Route Not Found"
     end
