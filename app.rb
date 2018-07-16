@@ -33,5 +33,6 @@ class App < Sinatra::Base
     when 'subtract' { x - y }
     when 'multiply' { x * y }
     when 'divide' { x / y }
+    end
   end
 end
