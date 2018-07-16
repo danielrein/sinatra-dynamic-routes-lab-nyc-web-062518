@@ -7,12 +7,11 @@ class App < Sinatra::Base
   end
 
   get '/square/:number' do
-    "#{:number * :number}"
+    "#{:number.to_i * :number.to_i}"
   end
 
   get '/say/:number/:phrase' do
-    string = :phrase.to_string
-    "#{:number * string}"
+    "#{:number.to_i * :phrase}"
   end
 
   get '/square/:number' do
