@@ -39,8 +39,6 @@ class App < Sinatra::Base
       "#{x * y}"
     when 'divide'
       "#{x / y}"
-    else
-      "Route Not Found"
     end
   end
 end
