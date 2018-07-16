@@ -27,6 +27,11 @@ class App < Sinatra::Base
   end
 
   get '/:operation/:number1/:number2' do
-    "#{word1} #{word2} #{word3} #{word4} #{word5}"
+    x, y = :number1.to_i, :number2:to_i
+    case :operation
+    when 'add'
+    when 'subtract'
+    when 'multiply'
+    when 'divide'
   end
 end
