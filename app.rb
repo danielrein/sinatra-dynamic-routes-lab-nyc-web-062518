@@ -12,7 +12,7 @@ class App < Sinatra::Base
 
   get '/say/:number/:phrase' do
     string = :phrase.to_string
-    "#{:number * :phrase}"
+    "#{:number * string}"
   end
 
   get '/square/:number' do
