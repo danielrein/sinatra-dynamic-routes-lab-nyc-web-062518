@@ -12,7 +12,6 @@ class App < Sinatra::Base
 
   get '/say/:number/:phrase' do
     string = :phrase.to_string
-    :number.times
     "#{:number * :phrase}"
   end
 
