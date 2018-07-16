@@ -1,4 +1,5 @@
 require_relative 'config/environment'
+require 'pry'
 
 class App < Sinatra::Base
 
@@ -13,6 +14,7 @@ class App < Sinatra::Base
   get '/say/:number/:phrase' do
     n = :number.to_i
     n.times { "#{:phrase}" }
+    binding.pry
   end
 
   get '/square/:number' do
