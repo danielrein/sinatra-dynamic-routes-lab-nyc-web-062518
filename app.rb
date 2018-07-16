@@ -19,7 +19,7 @@ class App < Sinatra::Base
   end
 
   get '/square/:number' do
-    "#{:number.to_i.square}"
+    "#{:number.to_i ** 2}"
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
