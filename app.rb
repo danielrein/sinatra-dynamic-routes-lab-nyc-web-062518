@@ -29,16 +29,15 @@ class App < Sinatra::Base
   get '/:operation/:number1/:number2' do
     x, y = :number1.to_i, :number2.to_i
     if :operation.to_s == 'add'
-      result = x + y
+      x + y
     elsif :operation.to_s == 'subtract'
-      result = x - y
+      x - y
     elsif :operation.to_s == 'multiply'
-      result = x * y
+      x * y
     elsif :operation.to_s == 'divide'
-      result = x / y
+      x / y
     else
-      result = "Route Not Found"
+      "Route Not Found"
     end
   end
-  erb result
 end
