@@ -29,9 +29,9 @@ class App < Sinatra::Base
   get '/:operation/:number1/:number2' do
     x, y = :number1.to_i, :number2.to_i
     case :operation
-    when 'add'
-    when 'subtract'
-    when 'multiply'
-    when 'divide'
+    when 'add' x + y
+    when 'subtract' x - y
+    when 'multiply' x * y
+    when 'divide' x / y
   end
 end
